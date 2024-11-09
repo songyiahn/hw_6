@@ -2,13 +2,16 @@
 title: "hw_6"
 format: pdf
 execute: 
-  eval: true
   echo: false
 fig-width: 6.5
-fig-height: 8 
+fig-height: 8
+bibliography: references.bib
 ---
 
 ```{r}
+#| message: false
+#| warning: false
+
 library(tidyverse)
 library(here)
 library(rio)
@@ -16,3 +19,7 @@ library(rio)
 star <- import(here("data", "star.csv")) %>% as_tibble()
 ```
 
+For homework6, program R created by @r is used for data analysis. Then R packages such as tidyverse [@tidyverse], here [@here], and rio [@rio] are applied.
+
+\newpage
+# References
