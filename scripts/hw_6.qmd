@@ -19,6 +19,34 @@ library(rio)
 star <- import(here("data", "star.csv")) %>% as_tibble()
 ```
 
+```{r}
+library(dplyr)
+library(psych)
+
+star_tbl <- star %>%
+  mutate(
+    sex = as.factor(sex),
+    frl = as.factor(frl))
+
+# Calculate summary statistics
+summary_table <- star_tbl %>%
+  group_by(sex, frl) %>%
+  summarize(
+    math_mean = mean(tmathss, na.rm = TRUE),
+    math_sd = sd(tmathss, na.rm = TRUE),
+    rdg_mean = mean(treadss, na.rm = TRUE),
+    rdg_sd = sd(treadss, na.rm = TRUE)
+  ) %>%
+  ungroup()
+
+
+# Display the summary table
+print(summary_table)
+```
+
+```
+
+
 For homework6, program R created by @r is used for data analysis. Then R packages such as tidyverse [@tidyverse], here [@here], and rio [@rio] are applied.
 
 \newpage
