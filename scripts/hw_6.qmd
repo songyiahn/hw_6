@@ -44,9 +44,6 @@ summary_table <- star_tbl %>%
 print(summary_table)
 ```
 
-```
-
-
 For homework6, program R created by @r is used for data analysis. Then R packages such as tidyverse [@tidyverse], here [@here], and rio [@rio] are applied.
 
 \newpage
