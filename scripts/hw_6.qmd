@@ -5,7 +5,7 @@ execute:
   echo: false
 fig-width: 6.5
 fig-height: 8
-bibliography: references.bib
+bibliography: references.bib 
 ---
 
 ```{r}
@@ -18,6 +18,13 @@ library(rio)
 
 star <- import(here("data", "star.csv")) %>% as_tibble()
 ```
+
+
+```{r}
+#install.packages("tinytex")
+library(tinytex)
+```
+
 
 ```{r}
 library(dplyr)
@@ -42,6 +49,10 @@ summary_table <- star_tbl %>%
 
 # Display the summary table
 print(summary_table)
+```
+
+```{r}
+
 ```
 
 For homework6, program R created by @r is used for data analysis. Then R packages such as tidyverse [@tidyverse], here [@here], and rio [@rio] are applied.
