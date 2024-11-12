@@ -27,6 +27,9 @@ library(tinytex)
 
 
 ```{r}
+#| message: false
+#| warning: false
+
 library(dplyr)
 library(psych)
 
@@ -51,9 +54,6 @@ summary_table <- star_tbl %>%
 print(summary_table)
 ```
 
-```{r}
-
-```
 
 For homework6, program R created by @r is used for data analysis. Then R packages such as tidyverse [@tidyverse], here [@here], and rio [@rio] are applied.
 
