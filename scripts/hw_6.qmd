@@ -19,7 +19,6 @@ library(rio)
 star <- import(here("data", "star.csv")) %>% as_tibble()
 ```
 
-
 ```{r}
 #install.packages("tinytex")
 library(tinytex)
