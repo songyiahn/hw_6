@@ -19,10 +19,12 @@ library(rio)
 star <- import(here("data", "star.csv")) %>% as_tibble()
 ```
 
+
 ```{r}
 #install.packages("tinytex")
 library(tinytex)
 ```
+
 
 ```{r}
 #| message: false
@@ -52,42 +54,8 @@ summary_table <- star_tbl %>%
 print(summary_table)
 ```
 
-<<<<<<< HEAD
-# Commit 4
-
-```{r}
-#| message: false
-#| warning: false
-
-library(ggplot2)
-library(dplyr)
-
-star <- star %>% 
-  mutate(frl = factor(frl, levels = c("yes", "no"), labels = c("Free/Reduced Price Meals", "Paid Meals")))
-
-ggplot(star, aes(x = totexp, y = tmathss, color = frl)) +
-  geom_point(alpha = 0.3, color = "gray") +
-  geom_smooth(method = "lm", se = TRUE) +
-  labs(
-    title = "Relation between teacher experience and math scores",
-    subtitle = "Separate regression lines displayed by free/reduced price lunch status",
-    x = "Teacher Experience (years)",
-    y = "Total Math Scale Score",
-    color = "Lunch status"
-  ) +
-   scale_color_manual(values = c("Free/Reduced Price Meals" = "#00BFC4", "Paid Meals" = "#F8766D")) +
-  theme_minimal() +
-  theme(legend.position = "bottom")
-```
-
-This plot shows the relationship between years of teacher experience and students' math scores, with separate linear regression lines for students based on lunch status ("Free/Reduced Price Meals" vs. "Paid Meals"). The lines indicate that students with "Paid Meals" tend to have higher math scores on average, compared to those with "Free/Reduced Price Meals" across different levels of teacher experience.
-=======
-The table presents average math and reading scores, along with standard deviations, for students grouped by gender (boys and girls) and free reduced lunch (FRL) status. Boys without FRL had a math mean of 493 and reading mean of 441, while boys with FRL scored lower on average in both subjects (470 in math and 425 in reading). Similarly, girls without FRL scored higher (501 in math and 449 in reading) compared to girls with FRL, who had averages of 478 in math and 431 in reading. This data highlights performance differences associated with gender and FRL status.
-
->>>>>>> origin/main
 
 For homework6, program R created by @r is used for data analysis. Then R packages such as tidyverse [@tidyverse], here [@here], and rio [@rio] are applied.
 
 \newpage
-
 # References
